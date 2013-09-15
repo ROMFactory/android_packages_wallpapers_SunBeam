@@ -80,7 +80,7 @@ public class SunBeamWallpaper extends WallpaperService {
 
             if (mWallpaperRS == null) {
                 mWallpaperRS = new SunBeamRS();
-                mWallpaperRS.init(mDensityDPI, mRenderScript, getResources(), width, height);
+                mWallpaperRS.init(SunBeamWallpaper.this, mDensityDPI, mRenderScript, getResources(), width, height);
                 mWallpaperRS.start();
             }
 
