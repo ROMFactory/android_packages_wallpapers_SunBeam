@@ -3,11 +3,16 @@
       package="com.android.sunbeam"
       android:versionCode="1"
       android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="13" />
+      
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="18" />
 
     <uses-feature android:name="android.software.live_wallpaper" />
 
-    <application android:icon="@drawable/icon" android:label="@string/wallpaper_label">
+    <application 
+        android:icon="@drawable/icon" 
+        android:label="@string/wallpaper_label">
         <service
             android:name=".SunBeamWallpaper"
             android:label="@string/wallpaper_label"
@@ -19,3 +24,4 @@
         </service>
     </application>
 </manifest>
+
