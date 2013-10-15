@@ -28,7 +28,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-package com.android.phasebeam;
+package com.android.sunbeam;
 
 import android.app.Activity;
 import android.app.WallpaperManager;
@@ -57,11 +57,11 @@ import android.view.LayoutInflater;
 import android.util.Log;
 import android.widget.TextView;
 
-public class PhaseBeamSelector extends Activity {
+public class SunBeamSelector extends Activity {
 
-    private static final String LOG_TAG = "PhaseBeamSelector";
+    private static final String LOG_TAG = "SunBeamSelector";
 
-    public static final String KEY_PREFS = "phasebeam";
+    public static final String KEY_PREFS = "sunbeam";
     public static final String KEY_HUE = "hue";
 
     private WallpaperManager mWallpaperManager;
@@ -81,7 +81,7 @@ public class PhaseBeamSelector extends Activity {
 
         setContentView(R.layout.selector);
 
-        mWallpaperIntent = new Intent(this, PhaseBeamWallpaper.class);
+        mWallpaperIntent = new Intent(this, SunBeamWallpaper.class);
         
         mWallpaperManager = WallpaperManager.getInstance(this);
         mWallpaperConnection = new WallpaperConnection(mWallpaperIntent);

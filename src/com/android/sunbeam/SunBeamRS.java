@@ -64,7 +64,7 @@ public class SunBeamRS implements OnSharedPreferenceChangeListener {
         if (!mInited) {
             mDensityDPI = dpi;
             mContext = context;
-            mSharedPref = mContext.getSharedPreferences(PhaseBeamSelector.KEY_PREFS, 
+            mSharedPref = mContext.getSharedPreferences(SunBeamSelector.KEY_PREFS, 
                                   Context.MODE_PRIVATE);
             mSharedPref.registerOnSharedPreferenceChangeListener(this);
 
@@ -119,7 +119,7 @@ public class SunBeamRS implements OnSharedPreferenceChangeListener {
     }
 
     void makeNewState() {
-        float hue = mSharedPref.getFloat(PhaseBeamSelector.KEY_HUE, 0);
+        float hue = mSharedPref.getFloat(SunBeamSelector.KEY_HUE, 0);
         mScript.set_hueAdjust(hue);
         createBackgroundMesh();
     }
@@ -178,7 +178,7 @@ public class SunBeamRS implements OnSharedPreferenceChangeListener {
         }
 
         int meshDataSize = meshData.size();
-        float hue = mSharedPref.getFloat(PhaseBeamSelector.KEY_HUE, 0);
+        float hue = mSharedPref.getFloat(SunBeamSelector.KEY_HUE, 0);
         mVertexColors = new ScriptField_VertexColor_s(mRS, meshDataSize);
         for(int i=0; i<meshDataSize; i++) {
             String line = (String) meshData.get(i);
